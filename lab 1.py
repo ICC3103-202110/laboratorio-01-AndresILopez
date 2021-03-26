@@ -9,9 +9,9 @@ from numpy import random
 def generate_board(a):
     board = []
     c = 0
-    for i in range():
+    for i in range(int(a/2)):
         board.append([])
-        for j in range():
+        for j in range(1):
             c += 1
             board[i].append(c)
             board[i].append(c)
@@ -78,8 +78,8 @@ def check_winner(board,jugador,terminado):
         print ("termino el juego, ha ganado ",jugador)
     return terminado
 a = int(input("numero de cartas para jugar "))
-generate_board(a)
-random_board(board)
+board = generate_board(a)
+board = random_board(board)
 terminado = False
 repeat = True
 puntos1 = 0
@@ -87,7 +87,7 @@ puntos2 = 0
 while terminado == False:
     while repeat:
         print ("turno de jugador 1, tiene ",puntos1," puntos")
-        show_board1(board)
+        print (show_board1(board))
         a2 = int(input("ingresa la fila de la 1era carta que quieres voltear "))
         a3 = int(input("ingresa la columna de la 1era carta que quieres voltear "))
         coordinates1 = [a2,a3]
@@ -104,7 +104,7 @@ while terminado == False:
     repeat = True
     while repeat:
         print ("turno jugador 2, tiene",puntos2," puntos")
-        show_board1(board)
+        print (show_board1(board))
         a2 = int(input("ingresa la fila de la 1era carta que quieres voltear "))
         a3 = int(input("ingresa la columna de la 1era carta que quieres voltear "))
         coordinates1 = [a2,a3]
